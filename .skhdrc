@@ -1,6 +1,9 @@
 # opens iTerm2
 alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
+# opens new Firefox Window
+alt + shift - return : open -n -a Firefox\ Developer\ Edition
+
 # Show system statistics
 fn + lalt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
 fn + lalt - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
