@@ -79,3 +79,8 @@ shift + lctrl + alt - r : \
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
+
+# Volume Keys
+f13 : /usr/bin/env m volume 0
+f14 : /usr/bin/env m volume down
+f15 : /usr/bin/env m volume up
