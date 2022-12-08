@@ -3,6 +3,7 @@ alt + shift - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
 # opens new Firefox Window
 alt - return : open -n -a Firefox\ Developer\ Edition
+alt + ctrl - return : open -n -a Firefox\ Developer\ Edition
 
 # Show system statistics
 # fn + lalt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
@@ -90,10 +91,9 @@ alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # Volume Keys
-# f13 : /usr/bin/env m volume 0 && terminal-notifier -title "Volume Muted" -message "$(m volume)"
-# f14 : /usr/bin/env m volume down && terminal-notifier -title "Volume Down" -message "$(m volume)" -sound "Hero"
-# f15 : /usr/bin/env m volume up && terminal-notifier -title "Volume Up" -message "$(m volume)" -sound "Hero"
-
 f13 : /usr/bin/env m volume 0 && terminal-notifier -title "Volume Muted" -message "$(m volume)"
-f14 : /usr/bin/env m volume -10 && afplay /System/Library/Sounds/Funk.aiff
-f15 : /usr/bin/env m volume +10 && afplay /System/Library/Sounds/Funk.aiff
+f14 : /usr/bin/env m volume -10 && afplay /System/Library/Sounds/Tink.aiff
+f15 : /usr/bin/env m volume +10 && afplay /System/Library/Sounds/Tink.aiff
+
+# Sleep Computer
+lctrl - f15 : afplay /System/Library/Sounds/Ping.aiff && pmset displaysleepnow
