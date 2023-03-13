@@ -81,10 +81,15 @@ shift + alt - space : \
     yabai -m window --toggle border
 
 # Restart Yabai
-# shift + lctrl + alt - r : \
-#     /usr/bin/env osascript <<< \
-#         "display notification \"Restarting Yabai\" with title \"Yabai\""; \
-#     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+shift + lctrl + alt - r : \
+     /usr/bin/env osascript <<< \
+         "display notification \"Restarting Yabai\" with title \"Yabai\""; \
+launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+# Switch Display
+# toggle sending window to next display
+alt + shift - z : yabai -m window --display next --space current && terminal-notifier -title "Volume Muted" -message "Moved to other Display"
+alt + shift - x : yabai -m window --display prev --space current && terminal-notifier -title "Volume Muted" -message "Moved to other Display"
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
