@@ -1,0 +1,23 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## Compatibility with Xcode 8 and earlier (deprecated)
+*.xcscmblueprint
+*.xccheckout
+
+## Build files
+DerivedData/
+build/
+*.o
+*.LinkFileList
+*.dSYM
+*.DS_Store
+
+## Pods - for those using CocoaPods
+Pods/
+Podfile.lock
+
