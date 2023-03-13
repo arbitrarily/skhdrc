@@ -41,6 +41,9 @@ shift + lctrl - 3 : yabai -m space --focus 3
 shift + lctrl - 4 : yabai -m space --focus 4
 shift + lctrl - 5 : yabai -m space --focus 5
 shift + lctrl - 6 : yabai -m space --focus 6
+shift + lctrl - 7 : yabai -m space --focus 7
+shift + lctrl - 8 : yabai -m space --focus 8
+shift + lctrl - 9 : yabai -m space --focus 9
 
 # Resize windows
 # lctrl + alt - h : yabai -m window --resize left:-50:0; \
@@ -87,13 +90,12 @@ shift + lctrl + alt - r : \
 launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Switch Display
-# toggle sending window to next display
-alt + shift - z : yabai -m window --display next --space current && terminal-notifier -title "Volume Muted" -message "Moved to other Display"
-alt + shift - x : yabai -m window --display prev --space current && terminal-notifier -title "Volume Muted" -message "Moved to other Display"
+alt + shift - z : yabai -m window --display next --space current && terminal-notifier -title "Window Moved" -message "Moved to other Display"
+alt + shift - x : yabai -m window --display prev --space current && terminal-notifier -title "Window Moved" -message "Moved to other Display"
 
 # Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+# alt - f         : yabai -m window --toggle zoom-fullscreen
+# shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # Volume Keys
 f13 : /usr/bin/env m volume 0 && terminal-notifier -title "Volume Muted" -message "$(m volume)"
