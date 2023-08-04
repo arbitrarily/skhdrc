@@ -56,7 +56,7 @@ shift + lctrl - 9 : yabai -m space --focus 9
 #                   yabai -m window --resize left:50:0
 
 # Equalize size of windows
-lctrl + alt - e : yabai -m space --balance
+shift + alt - e : yabai -m space --balance
 
 # Toggle Split
 shift + alt + lctrl - e : yabai -m window --toggle split
@@ -98,9 +98,13 @@ alt + shift - x : yabai -m window --display prev --space current && terminal-not
 # shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # Volume Keys
-f13 : /usr/bin/env m volume 0 && terminal-notifier -title "Volume Muted" -message "$(m volume)"
-f14 : /usr/bin/env m volume -10 && afplay /System/Library/Sounds/Tink.aiff
-f15 : /usr/bin/env m volume +10 && afplay /System/Library/Sounds/Tink.aiff
+# f13 : /usr/bin/env m volume 0 && terminal-notifier -title "Volume Muted" -message "$(m volume)"
+# f14 : /usr/bin/env m volume -10 && afplay /System/Library/Sounds/Tink.aiff
+# f15 : /usr/bin/env m volume +10 && afplay /System/Library/Sounds/Tink.aiff
+
+f13 : /usr/bin/env osascript -e 'set volume with output muted'
+f14 : /usr/bin/env osascript -e 'set volume output volume (output volume of (get volume settings) - 10)'; afplay ~/beep-6-96243.mp3
+f15 : /usr/bin/env osascript -e 'set volume output volume (output volume of (get volume settings) + 10)'; afplay ~/beep-6-96243.mp3
 
 # Sleep Computer
 lctrl - f15 : afplay /System/Library/Sounds/Ping.aiff && pmset displaysleepnow
