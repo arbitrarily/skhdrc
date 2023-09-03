@@ -106,5 +106,8 @@ f13 : /usr/bin/env osascript -e 'set volume with output muted'
 f14 : /usr/bin/env osascript -e 'set volume output volume (output volume of (get volume settings) - 10)'; afplay ~/beep-6-96243.mp3
 f15 : /usr/bin/env osascript -e 'set volume output volume (output volume of (get volume settings) + 10)'; afplay ~/beep-6-96243.mp3
 
+# Connect to Airpod Maxes
+shift + f15 : air
+shift + f14 : airpods
 # Sleep Computer
 lctrl - f15 : afplay /System/Library/Sounds/Ping.aiff && pmset displaysleepnow
