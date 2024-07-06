@@ -1,16 +1,15 @@
 # opens iTerm2
-alt + shift - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
+# alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
 # opens new Firefox Window
 alt - return : open -n -a Firefox\ Developer\ Edition
-alt + ctrl - return : open -n -a Firefox\ Developer\ Edition
 
 # Show system statistics
-# fn + lalt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
-# fn + lalt - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
-# fn + lalt - 3 : "${HOME}"/.config/yabai/scripts/show_bat.sh
-# fn + lalt - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
-# fn + lalt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
+# fn + 0x3A - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
+# fn + 0x3A - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
+# fn + 0x3A - 3 : "${HOME}"/.config/yabai/scripts/show_bat.sh
+# fn + 0x3A - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
+# fn + 0x3A - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
 
 # Navigation
 alt - h : yabai -m window --focus west
@@ -20,7 +19,7 @@ alt - l : yabai -m window --focus east
 
 # Moving windows
 shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
+shift + alt - j : yabai -m window --warp south€
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 
